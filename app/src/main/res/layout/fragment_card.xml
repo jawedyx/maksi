@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pw.jawedyx.maksi_01.CardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:elevation="5dp"
+            android:id="@+id/preauth_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ucard_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cardnum_text"
+                    android:id="@+id/numcardtext"
+                    android:layout_below="@+id/ucard_logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/editcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="8"
+                    android:text="@string/default_card_value"
+                    android:layout_below="@+id/numcardtext"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="50dp"
+                    android:paddingLeft="50dp"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/card_motto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_motto"
+                    android:gravity="end"
+                    android:textStyle="italic"
+                    android:layout_below="@+id/editcard"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp" />
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/preauth_alert"
+            android:text="@string/preauth_alert"
+            android:textSize="12sp"
+            android:layout_below="@+id/preauth_card"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept_cb"
+            android:layout_below="@+id/preauth_alert"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/accept_cb"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accept_cb"
+            android:text="@string/okbutton"
+            android:id="@+id/okbutton"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/okbutton"
+            android:textColor="#fff"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginTop="16dp" />
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
